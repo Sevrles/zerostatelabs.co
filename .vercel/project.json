@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_djIMQ1esOXu02qmvOzpzPcr7o8Lx",
+  "orgId": "team_IAQoXD3Gnk758J7RdSslvGVP",
+  "projectName": "zerostatelabs.co",
+  "settings": {
+    "createdAt": 1785803805089,
+    "framework": "services",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}
