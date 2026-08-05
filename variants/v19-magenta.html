@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZERO STATE — MAGENTA</title>
+<meta name="description" content="Zero State is an AI systems studio in Atlanta. Agent systems, automation, products. Revenue first.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Zero State","url":"https://zerostatelabs.co","description":"AI systems studio — agent systems, automation, products.","address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"}}
+</script>
+<style>
+:root{--paper:#E9E6DF;--ink:#101010;--pop:#FF2E88;--dim:#101010CC;--hair:#101010}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Martian Mono',monospace;font-size:14px;line-height:1.55;overflow-x:clip}
+.mono{font-family:'Martian Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;max-width:1200px;margin:0 auto;border-bottom:3px solid var(--ink)}
+nav .logo{font-family:'Anton',sans-serif;font-size:22px;letter-spacing:.02em}
+nav .logo b{color:var(--pop)}
+nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:12px;font-weight:700;text-transform:uppercase;border:2px solid transparent;padding:6px 10px}
+nav a:hover{border-color:var(--ink)}
+/* COLLISION HERO */
+header{max-width:1200px;margin:0 auto;padding:60px 28px 30px;position:relative}
+.collision{position:relative;height:min(52vh,420px)}
+.collide{position:absolute;font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.9}
+.collide.a{top:0;left:0;font-size:clamp(90px,16vw,210px);color:var(--ink);z-index:1}
+.collide.b{top:14%;right:0;font-size:clamp(70px,12vw,160px);color:var(--pop);z-index:2;mix-blend-mode:multiply}
+.collide.c{bottom:0;left:8%;font-size:clamp(90px,16vw,210px);color:transparent;-webkit-text-stroke:3px var(--ink);z-index:0}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;border-top:3px solid var(--ink);padding-top:20px;flex-wrap:wrap;gap:16px;position:relative;z-index:3}
+.hero-foot p{max-width:400px;font-size:13px;line-height:1.7}
+.hero-foot .mono{font-weight:700}
+section{max-width:1200px;margin:0 auto;padding:64px 28px;border-bottom:3px solid var(--ink)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px}
+.sec-head h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(30px,5vw,60px);text-transform:uppercase;letter-spacing:.01em}
+.sec-head .idx{font-weight:700;font-size:12px;border:3px solid var(--ink);padding:6px 12px}
+.bignums{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);margin-top:44px}
+.bn{padding:24px;border-right:3px solid var(--ink);display:flex;flex-direction:column;gap:12px}
+.bn:last-child{border-right:0}
+.bn .num{font-family:'Anton',sans-serif;font-size:clamp(50px,7vw,84px);line-height:.9;color:var(--pop);-webkit-text-stroke:2px var(--ink);letter-spacing:.01em}
+.bn .nm{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase}
+.bn .ds{font-size:12px;opacity:.75;line-height:1.6}
+.bn .st{font-size:10px;font-weight:700;text-transform:uppercase;border:2px solid var(--ink);padding:4px 10px;align-self:flex-start}
+.manifesto{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(30px,5vw,62px);line-height:1.08;text-transform:uppercase;max-width:940px}
+.manifesto .pop{color:var(--pop)}
+.manifesto .ghost{color:transparent;-webkit-text-stroke:2.5px var(--ink)}
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid var(--ink);margin-top:56px}
+.cap{border-right:3px solid var(--ink);padding:26px}
+.cap:last-child{border-right:0}
+.cap h3{font-family:'Anton',sans-serif;font-weight:400;font-size:20px;text-transform:uppercase;margin-bottom:12px}
+.cap h3::before{content:"// ";color:var(--pop)}
+.cap p{font-size:12px;line-height:1.65;opacity:.75}
+.cta{background:var(--pop);color:var(--paper);border-bottom:0}
+.cta .sec-head h2{color:var(--paper)}
+.cta .idx{border-color:var(--paper)}
+.cta .mail{display:inline-block;background:var(--ink);color:var(--paper);font-family:'Anton',sans-serif;text-transform:uppercase;font-size:18px;letter-spacing:.02em;padding:16px 26px;text-decoration:none;border:3px solid var(--ink);transition:transform .15s}
+.cta .mail:hover{transform:translate(-3px,-3px)}
+footer{max-width:1200px;margin:0 auto;padding:24px 28px 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11px;font-weight:700;text-transform:uppercase}
+::selection{background:var(--pop);color:var(--paper)}
+:focus-visible{outline:3px solid var(--pop);outline-offset:2px}
+@media(max-width:820px){.collision{height:auto;min-height:300px}.collide.a{font-size:17vw}.collide.b{font-size:13vw}.collide.c{font-size:17vw}.bignums,.caps{grid-template-columns:1fr}.bn,.cap{border-right:0;border-bottom:3px solid var(--ink)}.bn:last-child,.cap:last-child{border-bottom:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <div class="logo">ZERO<b>//</b>STATE</div>
+  <div><a href="#work">Work</a><a href="#thesis">Thesis</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="wrap">
+  <div class="mono" style="font-weight:700;margin-bottom:30px">AI SYSTEMS STUDIO — ATLANTA</div>
+  <div class="collision">
+    <div class="collide a">ZERO</div>
+    <div class="collide b">STATE</div>
+    <div class="collide c">SYSTEMS</div>
+  </div>
+  <div class="hero-foot">
+    <p>We build the systems, agents, and products that let businesses run on AI. Measured by revenue, not demos.</p>
+    <span class="mono">EST. 2026 — REVENUE FIRST</span>
+  </div>
+</header>
+
+<section id="work">
+  <div class="sec-head"><h2>WHAT WE SHIP</h2><span class="idx">01</span></div>
+  <div class="bignums">
+    <div class="bn"><span class="num">01</span><span class="nm">Ghost</span><span class="ds">Autonomous agent systems with guardrails. Runs while you sleep.</span><span class="st">LIVE</span></div>
+    <div class="bn"><span class="num">02</span><span class="nm">Curlspirations</span><span class="ds">The best of the web, machine-curated, human-edited.</span><span class="st">LIVE</span></div>
+    <div class="bn"><span class="num">03</span><span class="nm">PoseDirector</span><span class="ds">AI production pipelines. Concept to render, human-directed.</span><span class="st">IN DEV</span></div>
+  </div>
+</section>
+
+<section id="thesis">
+  <div class="sec-head"><h2>THESIS</h2><span class="idx">02</span></div>
+  <p class="manifesto">MODELS ARE <span class="ghost">TABLE STAKES.</span> THE <span class="pop">OPERATING LAYER</span> IS THE MOAT.</p>
+  <div class="caps">
+    <div class="cap"><h3>Agent systems</h3><p>Multi-agent architectures with real guardrails, observability, and jobs that matter.</p></div>
+    <div class="cap"><h3>Automation</h3><p>Workflows that run the business while you sleep — self-healing and measured.</p></div>
+    <div class="cap"><h3>Products</h3><p>Software people pay for, built on the AI layer, priced like software.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="sec-head"><h2>GOT WORK?</h2><span class="idx">03</span></div>
+  <a class="mail" href="mailto:hello@zerostatelabs.co">hello@zerostatelabs.co</a>
+</section>
+
+<footer>
+  <span>ZERO STATE © 2026</span>
+  <span>ATLANTA, GA — BUILT BY PEOPLE, RUN BY MACHINES</span>
+</footer>
+</body>
+</html>
