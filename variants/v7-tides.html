@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero State — Tides</title>
+<meta name="description" content="Zero State is an AI systems studio in Atlanta. Agent systems, automation, products. Revenue first.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Zero State","url":"https://zerostatelabs.co","description":"AI systems studio — agent systems, automation, products.","address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"}}
+</script>
+<style>
+:root{--deep:#18222E;--sea:#1F2C3B;--bone:#E8E4DA;--dust:#8AA0B0;--moss:#9DB4A8;--dim:rgba(232,228,218,.42);--hair:rgba(232,228,218,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--deep);color:var(--bone);font-family:'Fraunces',serif;font-size:17px;line-height:1.55;overflow-x:clip}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 48px}
+nav{display:flex;justify-content:space-between;padding:28px 48px;max-width:1180px;margin:0 auto}
+nav a{color:var(--bone);text-decoration:none;margin-left:26px}
+nav a:hover{color:var(--dust)}
+/* VERTICAL HERO WORD */
+.vword{position:fixed;right:0;top:0;bottom:0;writing-mode:vertical-rl;transform:rotate(180deg);font-size:13px;letter-spacing:.6em;text-transform:uppercase;font-family:'IBM Plex Mono',monospace;color:var(--dust);display:flex;align-items:center;border-left:1px solid var(--hair);padding:0 20px;z-index:3;background:linear-gradient(180deg,var(--deep),var(--sea))}
+header{max-width:1180px;margin:0 auto;padding:150px 48px 100px;position:relative}
+.ghost-word{position:absolute;top:-20px;right:40px;font-size:clamp(120px,22vw,300px);font-weight:900;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(138,160,176,.14);line-height:1;user-select:none;pointer-events:none}
+h1{font-size:clamp(52px,8.5vw,120px);font-weight:400;letter-spacing:-.03em;line-height:1;position:relative}
+h1 em{font-style:italic;font-weight:300;color:var(--dust)}
+h1 .thin{font-weight:200;color:var(--dim)}
+.hero-meta{display:flex;gap:60px;margin-top:70px;border-top:1px solid var(--hair);padding-top:26px}
+.hero-meta div{flex:1}
+.hero-meta .k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--moss);margin-bottom:10px}
+.hero-meta p{font-size:14px;color:var(--dim);max-width:300px}
+section{max-width:1180px;margin:0 auto;padding:90px 48px;border-top:1px solid var(--hair)}
+h2{font-size:clamp(28px,3.6vw,48px);font-weight:400;letter-spacing:-.02em;margin-bottom:14px}
+h2 em{font-style:italic;color:var(--dust)}
+.sec-lab{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--moss);margin-bottom:34px}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
+.w{border:1px solid var(--hair);background:var(--deep);padding:34px;position:relative;transition:background .2s}
+.w:hover{background:var(--sea)}
+.w .num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--dust);margin-bottom:50px}
+.w h3{font-size:clamp(22px,2.4vw,30px);font-weight:500;letter-spacing:-.02em;margin-bottom:12px}
+.w h3 em{font-style:italic;color:var(--dust)}
+.w p{font-size:13.5px;color:var(--dim)}
+.w .st{position:absolute;bottom:30px;left:34px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+.thesis{display:grid;grid-template-columns:1fr 340px;gap:70px;align-items:center}
+.thesis .big{font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.35;letter-spacing:-.01em}
+.thesis .big strong{font-weight:600}
+.thesis .big em{font-style:italic;color:var(--dust)}
+.thesis aside p{font-size:13.5px;color:var(--dim);border-left:1px solid var(--dust);padding-left:22px}
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.caps h3{font-size:17px;font-weight:500;margin-bottom:10px}
+.caps h3::before{content:"// ";color:var(--dust)}
+.caps p{font-size:13.5px;color:var(--dim)}
+.cta{padding:110px 48px}
+.cta .mail{font-size:clamp(22px,2.8vw,34px);color:var(--dust);text-decoration:none;border-bottom:1px solid var(--dust);padding-bottom:6px}
+.cta .mail:hover{color:var(--moss)}
+footer{max-width:1180px;margin:0 auto;padding:28px 48px 90px;display:flex;justify-content:space-between;color:var(--dim);font-size:12px;border-top:1px solid var(--hair);flex-wrap:wrap;gap:10px}
+::selection{background:var(--dust);color:var(--deep)}
+:focus-visible{outline:2px solid var(--dust);outline-offset:3px}
+@media(max-width:900px){.vword{display:none}.work,.caps,.thesis{grid-template-columns:1fr}.hero-meta{flex-direction:column;gap:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="vword">ZERO STATE — ATLANTA — AI SYSTEMS STUDIO</div>
+
+<nav class="wrap">
+  <span class="mono" style="color:var(--bone)">Zero State</span>
+  <div><a href="#work">Work</a><a href="#thesis">Thesis</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="wrap">
+  <div class="ghost-word">ZERO</div>
+  <div class="sec-lab" style="margin-bottom:40px">AI systems studio — est. 2026</div>
+  <h1>Machines<br>do the <em>work.</em><br><span class="thin">People make the call.</span></h1>
+  <div class="hero-meta">
+    <div><div class="k">Position</div><p>We build the AI layer for businesses that need to move faster than their org charts.</p></div>
+    <div><div class="k">Measure</div><p>Revenue, uptime, and shipped work. Never slide decks.</p></div>
+    <div><div class="k">Base</div><p>Atlanta, GA — remote friendly.</p></div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="sec-lab">01 — Selected work</div>
+  <h2>Three systems, <em>live.</em></h2>
+  <div class="work" style="margin-top:44px">
+    <div class="w"><span class="num">/01</span><h3>Ghost</h3><p>Autonomous agent systems and workflows with guardrails and self-healing.</p><span class="st">Live</span></div>
+    <div class="w"><span class="num">/02</span><h3>Curlspirations</h3><p>A curated index of the web's best ideas — read by machines, edited by us.</p><span class="st">Live</span></div>
+    <div class="w"><span class="num">/03</span><h3>PoseDirector</h3><p>AI production pipelines for creative teams, human-directed end to end.</p><span class="st">In dev</span></div>
+  </div>
+</section>
+
+<section id="thesis">
+  <div class="sec-lab">02 — Thesis</div>
+  <div class="thesis">
+    <p class="big">The models are table stakes. <strong>The operating layer is the business.</strong> We build the systems that turn model access into <em>revenue</em> — quietly, in Atlanta.</p>
+    <aside><p>Every company is becoming an AI company. The winners will be the ones whose operations actually run on the stack — not the ones with the best demo.</p></aside>
+  </div>
+  <div class="caps" style="margin-top:80px">
+    <div><h3>Agent systems</h3><p>Multi-agent architectures with guardrails, observability, and real jobs.</p></div>
+    <div><h3>Automation</h3><p>Workflows that run operations on their own and page a human when it matters.</p></div>
+    <div><h3>Products</h3><p>Software people pay for — built on the AI layer, shipped on time.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="sec-lab" style="margin-bottom:20px">03 — Contact</div>
+  <a class="mail" href="mailto:hello@zerostatelabs.co">hello@zerostatelabs.co</a>
+</section>
+
+<footer>
+  <span>Zero State © 2026</span>
+  <span>Atlanta, GA — 33.7490° N</span>
+</footer>
+</body>
+</html>
